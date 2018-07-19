@@ -3,7 +3,7 @@ build:
 	@mkdir bin >/dev/null 2>&1 || true
 	go build -o bin/helm-take-ownership -ldflags "-X main.date=$$(date "+%Y-%m-%d")"
 
-.PHONY: dependencies
+.PHONY: dep
 dependencies:
 	glide up -v
 
